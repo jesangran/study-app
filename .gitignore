@@ -31,10 +31,17 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
 
 # typescript
 *.tsbuildinfo
+
+# IDE
+.idea/
+
+# Gradle caches (local modules)
+**/.gradle/
 
 # generated native folders
 /ios

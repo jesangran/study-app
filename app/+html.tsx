@@ -29,11 +29,23 @@ export default function Root({ children }: { children: ReactNode }) {
 }
 
 const responsiveBackground = `
-body {
-  background-color: #fff;
+html, body, #root {
+  height: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #000;
-  }
-}`;
+body {
+  background-color: #FFFBEA;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+}
+/* React Native Web Text가 한글 하단을 자르는 문제 보정 (탭바) */
+#root div[class*="css-text"] {
+  overflow: visible !important;
+}
+`;
